@@ -17,5 +17,6 @@ let calculateSalesTax = function(amount, taxRate){
 }
 
 //Logging the function and testing it with provided data.
-console.log(`Sales Tax: $${Math.floor(calculateSalesTax(100, 0.07))}`) // Expected output: 7 // Had to use math floor to round down from 7.0001 to 7.
+// // Had to use math floor to round down from 7.0001 to 7.
+console.log(`Sales Tax: $${Math.floor(calculateSalesTax(100, 0.07))}`) // Expected output: 7
 console.log(`Sales Tax: $${calculateSalesTax(500, 0.1)}`) // Expected output: 50
