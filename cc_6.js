@@ -20,3 +20,17 @@ let calculateSalesTax = function(amount, taxRate){
 // // Had to use math floor to round down from 7.0001 to 7.
 console.log(`Sales Tax: $${Math.floor(calculateSalesTax(100, 0.07))}`) // Expected output: 7
 console.log(`Sales Tax: $${calculateSalesTax(500, 0.1)}`) // Expected output: 50
+
+//Task 3 - Arrow Function
+
+//Writing an arrow function that calculates a bonus based on a salary and a performance rating.
+const calculateBonus  = (salary, performanceRating) => salary * performanceRating
+
+//Declaring the difference values for each performance evaluation.
+let excellent = 0.2 //20% Bonus
+let good = 0.1 //10% Bonus
+let average = 0.05 //5% Bonus
+
+//Logging the arrow function with provided data.
+console.log(`Bonus: $${calculateBonus(5000, excellent)}`)
+console.log(`Bonus: $${calculateBonus(7000, good)}`)
