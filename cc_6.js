@@ -97,3 +97,14 @@ let tracker = createExpenseTracker()
 //Logging tracker with provided data.
 console.log(tracker(200)) //Expected output: 200
 console.log(tracker(150)) //Expected output: 350
+
+//Task 8 - Recursion in JavaScript
+
+//Writing a function that calculates how many years left before an employee reaches level 10.
+function calculateYearsToPromotion(employeeLevel){
+    if (employeeLevel >= 10 ) return "Years to Level 10: 0" //If level is 10, no years left to make it there.
+
+    return `Years to Level 10: ${2 * (10 - employeeLevel)}` //Takes the remaining levels to level 10 and multiplies it by 2 becuase each level takes 2 years.
+}
+console.log(calculateYearsToPromotion(7)) //Expected Result: 6
+console.log(calculateYearsToPromotion(5)) //Expected Result: 10
