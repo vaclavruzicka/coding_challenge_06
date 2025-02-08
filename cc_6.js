@@ -34,3 +34,17 @@ let average = 0.05 //5% Bonus
 //Logging the arrow function with provided data.
 console.log(`Bonus: $${calculateBonus(5000, excellent)}`)
 console.log(`Bonus: $${calculateBonus(7000, good)}`)
+
+//Task 4 - Parameters and Arguments
+
+//Writing a function that calculates subscription cost give the plans cost, how many months, and if there is a discount.
+const calculateSubscriptionCost = (plan, months, discount) => plan * months - discount
+
+//Declaring variables for each subscription tier and their price.
+let basic = 10
+let premium = 20
+let enterprise = 50
+
+//Logging the function with provided data.
+console.log(`Total Cost: $${calculateSubscriptionCost(basic, 6, 10)}`) //Expected output: 50
+console.log(`Total Cost: $${calculateSubscriptionCost(premium, 12, 0)}`) //Expected output: 240
