@@ -59,3 +59,22 @@ function convertCurrency(amount, exchangeRate){
 //Logging the function with provided data.
 console.log(`Converted Amount: $${(convertCurrency(100, 1.1).toFixed(2))}`) //Expected output: 110
 console.log(`Converted Amount: $${convertCurrency(250, 0.85).toFixed(2)}`) //Expected output: 212.50
+
+//Task 6 - Higher-Order Functions
+
+//Writing a function that can apply the discount function to an array all at once.
+function applyBulkDiscount(orders, discountFunction){
+    return orders.map(order => discountFunction(order))
+}
+
+//Declaring an array named orders with five order amounts.
+const orders = [200, 600, 1200, 450, 800]
+
+//Declaring the discount rate
+const discountRate = .1 //10% discount rate.
+
+//Defining a variable discountedOrders so that it is easier to log the array of numbers with a discount.
+const discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount)
+
+//Logging the array of discounted orders.
+console.log(discountedOrders)
