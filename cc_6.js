@@ -78,3 +78,22 @@ const discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amou
 
 //Logging the array of discounted orders.
 console.log(discountedOrders)
+
+//Task 7 - Closures
+
+//Creating a function that will keep a running total of expenses.
+function createExpenseTracker(){
+    let totalExpenses = 0 //Starts the running total at zero.
+
+    return function(expense){
+        totalExpenses += expense //Adds whatever expense amount to the running total.
+        return `Total Expenses: $${totalExpenses}` //Reutrns the total expenses in a template literal.
+    }
+}
+
+//Making tracker be able to be input instead of createExpenseTracker in order to make it easier to type.
+let tracker = createExpenseTracker()
+
+//Logging tracker with provided data.
+console.log(tracker(200)) //Expected output: 200
+console.log(tracker(150)) //Expected output: 350
