@@ -48,3 +48,14 @@ let enterprise = 50
 //Logging the function with provided data.
 console.log(`Total Cost: $${calculateSubscriptionCost(basic, 6, 10)}`) //Expected output: 50
 console.log(`Total Cost: $${calculateSubscriptionCost(premium, 12, 0)}`) //Expected output: 240
+
+//Task 5 - Returning Values
+
+//Writing a function that calculates currency conversion given an amount and an exchange rate.
+function convertCurrency(amount, exchangeRate){
+    return amount * exchangeRate
+}
+
+//Logging the function with provided data.
+console.log(`Converted Amount: $${(convertCurrency(100, 1.1).toFixed(2))}`) //Expected output: 110
+console.log(`Converted Amount: $${convertCurrency(250, 0.85).toFixed(2)}`) //Expected output: 212.50
